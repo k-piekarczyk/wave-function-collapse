@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "wave-function-collapse"
+version = "0.0.0"
+description = "Attempt at procedural generation with wave function collapse"
+authors = ["Krzysztof Piekarczyk <krzysztof@piekarczyk.eu>"]
+readme = "README.md"
+packages = [{include = "wave_function_collapse", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "~3.12"
+numba = "^0.60.0"
+numpy = "^2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+mypy = "^1.11.1"
+black = "^24.8.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+commitizen = "^3.29.0"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.mypy]
+python_version = "3.12"
+follow_imports = "silent"
+warn_unused_configs = true
+ignore_missing_imports = true
+exclude = ["^tests/$"]
+
+
