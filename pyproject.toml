@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "wave-function-collapse"
-version = "0.0.0"
+version = "0.1.0"
 description = "Attempt at procedural generation with wave function collapse"
 authors = ["Krzysztof Piekarczyk <krzysztof@piekarczyk.eu>"]
 readme = "README.md"
