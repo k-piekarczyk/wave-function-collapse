@@ -1,16 +1,10 @@
-from typing import TypedDict, NamedTuple
+from typing import TypedDict
 
-
-__all__ = ["LabelDescription", "PossibleLabel"]
-
-
-class PossibleLabel(NamedTuple):
-    label: str
-    weight: float
+__all__ = ["LabelDescription"]
 
 
 class LabelDescription(TypedDict):
-    up: list[PossibleLabel]
-    down: list[PossibleLabel]
-    left: list[PossibleLabel]
-    right: list[PossibleLabel]
+    up: set[str]
+    down: set[str]
+    left: set[str]
+    right: set[str]
